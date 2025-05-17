@@ -1,19 +1,4 @@
---BAC 67-A
-INSERT INTO componente_de_informacion (idComponente_Informacion, nombre, descripcion, idTipo_Informacion, idNodo, idHardware) VALUES
-(101, 'Contratos de suministro', 'Información de acuerdos con clientes y proveedores de energía', 3, 1, NULL),
-(102, 'Datos de clientes', 'Información personal y comercial de clientes', 1, 1, NULL),
-(103, 'Historial de consumo', 'Registros de consumo energético por cliente y período', 2, 1, NULL),
-(104, 'Tarifas y precios', 'Estructuras tarifarias y precios aplicados a los servicios energéticos', 1, 1, NULL),
-(105, 'Facturación y cobranzas', 'Información sobre facturas emitidas y pagos recibidos', 1, 1, NULL),
-(106, 'Incidentes y reclamos', 'Registro de eventos, quejas y solicitudes de los clientes', 1, 1, NULL),
-(107, 'Programación de mantenimientos', 'Planificación y seguimiento de tareas de mantenimiento en infraestructuras', 1, 1, NULL),
-(108, 'Reportes regulatorios', 'Informes requeridos por entidades gubernamentales y organismos de control', 3, 1, NULL),
-(109, 'Datos de generación y distribución', 'Información sobre la producción y distribución de energía', 2, 1, NULL),
-(110, 'Indicadores de desempeño', 'Métricas clave para evaluar la eficiencia y calidad del servicio', 2, 1, NULL),
-(111, 'Comunicaciones con clientes', 'Historial de comunicaciones y notificaciones enviadas a los clientes', 4, 1, NULL);
---///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
---BAC 67-B
--- Servicios del componente C101
+# Servicios del componente C101
 INSERT INTO servicio_de_informacion (idServicio_de_informacion, nombre, descripcion, idComponente_Informacion, tipo_Informacion) VALUES
 (10101, 'Consulta de historial', 'Permite recuperar los registros de pedidos anteriores por cliente, producto o fecha.', 101, 1),
 (10102, 'Exportación de reportes', 'Genera reportes del historial de pedidos para análisis logístico y comercial.', 101, 1),
@@ -22,7 +7,7 @@ INSERT INTO servicio_de_informacion (idServicio_de_informacion, nombre, descripc
 (10105, 'Integración con sistemas externos', 'Comparte historial de pedidos con sistemas de proveedores o clientes para coordinación y trazabilidad.', 101, 1),
 (10106, 'Generación de reportes históricos', 'Permite crear reportes detallados del historial de pedidos para análisis mensual, trimestral o anual.', 101, 1);
 
--- Servicios del componente C102
+# Servicios del componente C102
 INSERT INTO servicio_de_informacion (idServicio_de_informacion, nombre, descripcion, idComponente_Informacion, tipo_Informacion) VALUES
 (10201, 'Registro de pedidos', 'Permite crear nuevos pedidos de productos desde estaciones o puntos de venta.', 102, 1),
 (10202, 'Consulta de pedidos', 'Facilita la visualización de pedidos activos, históricos y su estado actual.', 102, 1),
@@ -31,7 +16,7 @@ INSERT INTO servicio_de_informacion (idServicio_de_informacion, nombre, descripc
 (10205, 'Generación de órdenes de despacho', 'Crea automáticamente órdenes de despacho a partir de pedidos confirmados.', 102, 1),
 (10206, 'Seguimiento de entrega', 'Muestra en tiempo real el estado logístico de los pedidos hasta su entrega.', 102, 1);
 
--- Servicios del componente C103
+# Servicios del componente C103
 INSERT INTO servicio_de_informacion (idServicio_de_informacion, nombre, descripcion, idComponente_Informacion, tipo_Informacion) VALUES
 (10301, 'Consulta de inventario', 'Permite visualizar los niveles actuales de productos en bodegas y estaciones.', 103, 1),
 (10302, 'Registro de entradas', 'Registra productos que ingresan al inventario por compras o transferencias.', 103, 1),
@@ -39,43 +24,40 @@ INSERT INTO servicio_de_informacion (idServicio_de_informacion, nombre, descripc
 (10304, 'Generación de reportes de stock', 'Produce informes detallados sobre disponibilidad, rotación y escasez.', 103, 1),
 (10305, 'Alertas por niveles mínimos', 'Notifica automáticamente cuando el stock cae por debajo de lo establecido.', 103, 1),
 (10306, 'Auditoría de movimientos', 'Permite rastrear todas las transacciones de inventario con fecha y usuario.', 103, 1);
---///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
---BAC 67-C
--- ID1 (C101)
+# ID1 - C101
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (101, 1), (101, 4), (101, 5), (101, 7), (101, 8), (101, 13);
 
--- ID2 (C102)
--- (no hay conceptos marcados)
+# ID2 - C102 (no tiene conceptos, se omite)
 
--- ID3 (C103)
+# ID3 - C103
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (103, 1);
 
--- ID4 (C104)
+# ID4 - C104
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (104, 1);
 
--- ID5 (C105)
+# ID5 - C105
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (105, 6), (105, 8);
 
--- ID6 (C106)
+# ID6 - C106
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (106, 9);
 
--- ID7 (C107)
+# ID7 - C107
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (107, 2), (107, 3);
 
--- ID8 (C108)
+# ID8 - C108
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (108, 5), (108, 7);
 
--- ID9 (C109)
+# ID9 - C109
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (109, 8), (109, 12);
 
--- ID10 (C110)
+# ID10 - C110
 INSERT INTO componente_informacion_concepto (idComponente_Informacion, idConcepto) VALUES
 (110, 1), (110, 2), (110, 4), (110, 6), (110, 7), (110, 8), (110, 9), (110, 10);
